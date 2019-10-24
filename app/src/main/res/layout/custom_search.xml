@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar android:id="@+id/customToolbar"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    app:contentInsetStart="0dp"
+    android:focusableInTouchMode="true"
+    android:elevation="3dp"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <ImageView
+            android:id="@+id/ivBarBack"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/height_56dp"
+            android:padding="@dimen/padding_16dp"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/ic_arrow_back"
+            android:adjustViewBounds="true"
+            />
+        <EditText
+            android:id="@+id/etBarSearch"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_56dp"
+            android:layout_marginEnd="@dimen/margin_56dp"
+            android:inputType="text"
+            android:layout_toEndOf="@+id/ivBarBack"
+            android:layout_marginStart="@dimen/margin_16dp"
+            android:background="@null"
+            android:hint="Cari Kabupaten / Kota"
+            />
+
+    </RelativeLayout>
+</androidx.appcompat.widget.Toolbar>

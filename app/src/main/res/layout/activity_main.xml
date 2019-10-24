@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp"
+    android:paddingTop="10dp"
+    android:background="@color/white"
+    tools:context=".ui.home.MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kota Asal"
+            android:layout_marginBottom="10dp"
+            android:textSize="14sp"/>
+        <com.ndroid.CoolEditText
+            android:id="@+id/etSource"
+            style="@style/coolEditText"
+            android:hint="Kota Asal"
+            android:focusable="false"
+            android:inputType="textEmailAddress"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kota Tujuan"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"
+            android:textSize="14sp"/>
+        <com.ndroid.CoolEditText
+            android:id="@+id/etDestination"
+            style="@style/coolEditText"
+            android:hint="Kota Tujuan"
+            android:focusable="false"
+            android:inputType="textEmailAddress"
+            />
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:layout_marginTop="20dp"
+            android:text="Cek Ongkos Kirim"
+            android:textColor="@color/white"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Harga ongkos kirim / 1 Kg"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"/>
+        <LinearLayout
+            android:id="@+id/llMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <ProgressBar
+                android:id="@+id/pbMain"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:progress="100"
+                android:max="100"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mengambil Informasi Expedisi..."
+                android:textAlignment="center"/>
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvMain"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="true"/>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
