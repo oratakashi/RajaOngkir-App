@@ -19,6 +19,7 @@ android {
         debug {
             resValue("string", "runMode", "development")
             buildConfigField 'String', 'BASE_URL', '"https://api.rajaongkir.com/starter/"'
+//            buildConfigField 'String', 'BASE_URL', '"http://192.168.1.3:2000"'
             buildConfigField 'String', 'KEY', '"30f97c26fae291955a5f602523133fa5"'
         }
     }
